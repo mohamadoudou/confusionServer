@@ -6,10 +6,10 @@ const favoriteSchema=Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
     },
-    dishes:{
-        type:[mongoose.Schema.Types.ObjectId],
+    dishes:[{
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Dish'
-    }
+    }]
 });
 
 var Favorites=mongoose.model('Favorite',favoriteSchema);
